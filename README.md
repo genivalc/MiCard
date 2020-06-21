@@ -10,4 +10,4 @@
 ## 📱 Gif #
 
 
-<img alt="ExpensesTela1" title="#ExpensesTela1" src="./assets-github/imagens.gif.gif" width="200px">
+<img alt="ExpensesTela1" title="#ExpensesTela1" src="./assets-github/imagens.gif.gif" width="600px">
