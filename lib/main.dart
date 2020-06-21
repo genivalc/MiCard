@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(MyApp());
@@ -55,27 +55,32 @@ class MyApp extends StatelessWidget {
                     Icons.phone,
                     color: Colors.blueGrey,
                   ),
-                  title: Text(
-                    "+55 (83) 99673-1067",
-                    style: TextStyle(
-                      color: Colors.blueGrey.shade900,
-                      fontFamily: "Source Sans Pro",
-                      fontSize: 15.0,
+                  title: FlatButton(
+                    onPressed: _launchURL,
+                    child: Text(
+                      "+55(83)99673-1067                                       ",
+                      style: TextStyle(
+                        color: Colors.blueGrey.shade900,
+                        fontFamily: "Source Sans Pro",
+                        fontSize: 15.0,
+                      ),
                     ),
                   ),
                 ),
               ),
               Card(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 5.0,
-                    horizontal: 15.0,
+                margin: EdgeInsets.symmetric(
+                  vertical: 5.0,
+                  horizontal: 15.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.blueGrey,
                   ),
-                  child: ListTile(
-                    leading: Icon(
-                      Icons.email,
-                      color: Colors.blueGrey,
-                    ),
-                    title: Text(
+                  title: FlatButton(
+                    onPressed: _emailURL,
+                    child: Text(
                       "genivalcandeiadon.neto@gmail.com",
                       style: TextStyle(
                         color: Colors.blueGrey.shade900,
@@ -83,7 +88,9 @@ class MyApp extends StatelessWidget {
                         fontSize: 15.0,
                       ),
                     ),
-                  )),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
@@ -92,4 +99,20 @@ class MyApp extends StatelessWidget {
   }
 }
 
-//<div>Ícones feitos por <a href="https://www.flaticon.com/br/autores/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/br/" title="Flaticon">www.flaticon.com</a></div>
+_launchURL() async {
+  const url = 'https://whats.link/netogenival';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
+_emailURL() async {
+  const url = 'mailto:genivalcandeiadon.neto@gmail.com';
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
