@@ -49,7 +49,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ```bash
 # Clone este repositório
-$ git clone https://github.com/genivalc/Refei-es-Deli.git
+$ git clone https://github.com/genivalc/MiCard.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd -Despesas
