@@ -52,7 +52,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 $ git clone https://github.com/genivalc/MiCard.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd -Despesas
+$ cd -MiCard
 
  Para executar o projeto basta pressionar F5 no Vs code , ou se quiser executar o projeto na linha de comando, abra um terminal de comandos e posicione-se na pasta raiz do projeto que deseja executar e digite o comando :
  flutter run -d all
